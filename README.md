@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Fake News Detection Using Machine Learning
 
 This project implements a machine learning pipeline to classify news articles as real or fake based on their content. It uses text preprocessing, TF-IDF vectorization, and various classification models to achieve this goal.
@@ -92,3 +93,6 @@ The model is evaluated using:
 ## Contributing
 
 Feel free to submit issues and enhancement requests! 
+=======
+# Fake-News-Detection
+>>>>>>> 850ee786c73fdc7a1d243eb8d5f6dd1bf084ba7b

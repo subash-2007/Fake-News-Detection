@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="description" content="Detect fake news with our AI-powered tool. Check the authenticity of news articles with machine learning technology.">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-newspaper"></i> Fake News Detector</h1>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="https://github.com/yourusername/fake-news-detector" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Detect Fake News with AI</h2>
+                <p>Our machine learning model analyzes news content to determine if it's likely real or fake.</p>
+            </div>
+        </section>
+
+        <section class="input-section">
+            <div class="container">
+                <div class="input-container">
+                    <h3>Enter News Text</h3>
+                    <textarea id="newsText" placeholder="Paste news article text here to analyze..." rows="8"></textarea>
+                    <div class="buttons">
+                        <button id="analyzeBtn" class="primary-btn"><i class="fas fa-search"></i> Analyze</button>
+                        <button id="clearBtn" class="secondary-btn"><i class="fas fa-trash"></i> Clear</button>
+                        <button id="sampleBtn" class="secondary-btn"><i class="fas fa-flask"></i> Try Sample</button>
+                    </div>
+                    <div id="charCount" class="char-count">0 characters</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultSection" class="result-section" style="display: none;">
+            <div class="container">
+                <div id="resultContainer" class="result-container">
+                    <div class="result-header">
+                        <h3>Analysis Result</h3>
+                    </div>
+                    <div class="result-body">
+                        <div class="prediction-result">
+                            <div id="predictionLabel" class="prediction-label"></div>
+                            <div class="prediction-confidence">
+                                <p>Confidence: <span id="confidenceValue">0%</span></p>
+                                <div class="progress-bar">
+                                    <div id="confidenceBar" class="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details-container">
+                            <div class="details-toggle" onclick="toggleDetails()">
+                                <span>View Analysis Details</span>
+                                <i id="detailsIcon" class="fas fa-chevron-down"></i>
+                            </div>
+                            <div id="detailsContent" class="details-content">
+                                <div class="detail-item">
+                                    <span class="detail-label">Word Count:</span>
+                                    <span id="wordCount" class="detail-value">0</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Confidence Level:</span>
+                                    <span id="confidenceLevel" class="detail-value">-</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Probability (Real):</span>
+                                    <span id="realProb" class="detail-value">0%</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Probability (Fake):</span>
+                                    <span id="fakeProb" class="detail-value">0%</span>
+                                </div>
+                                <div class="detail-item processed-text">
+                                    <span class="detail-label">Processed Text:</span>
+                                    <p id="processedText" class="detail-value processed-value"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="loading-section" id="loadingSection" style="display: none;">
+            <div class="container">
+                <div class="loading-container">
+                    <div class="spinner"></div>
+                    <p>Analyzing text...</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="info-section">
+            <div class="container">
+                <div class="info-cards">
+                    <div class="info-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Our model is trained on thousands of labeled news articles to distinguish patterns of fake news.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Privacy Focused</h3>
+                        <p>Your data is processed locally and never stored on our servers. Your privacy is important.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Continuous Improvement</h3>
+                        <p>Our models are regularly retrained with new data to improve detection accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Fake News Detector | Built with <i class="fas fa-heart"></i> using Flask and ML</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

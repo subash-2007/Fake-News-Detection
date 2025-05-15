@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Fake News Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="description" content="Learn about our fake news detection methodology, machine learning model, and the technology behind our tool.">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-newspaper"></i> Fake News Detector</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about" class="active">About</a></li>
+                    <li><a href="https://github.com/yourusername/fake-news-detector" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>About This Project</h2>
+                <p>Learn about our methodology, technology, and the importance of combating misinformation.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h3><i class="fas fa-info-circle"></i> What is Fake News?</h3>
+                    <p>
+                        Fake news refers to false or misleading information presented as news. It often has the aim of damaging 
+                        the reputation of a person or entity, or making money through advertising revenue. 
+                        Unlike news satire, fake news tries to mislead, rather than entertain readers for humorous purposes.
+                    </p>
+                    
+                    <h3><i class="fas fa-cogs"></i> How Our Detector Works</h3>
+                    <p>
+                        Our fake news detector uses machine learning to analyze text content and identify patterns 
+                        associated with misleading or fabricated news. The system makes predictions based on:
+                    </p>
+                    <ul>
+                        <li>Linguistic patterns and writing style</li>
+                        <li>Use of sensationalist language</li>
+                        <li>Context and content inconsistencies</li>
+                        <li>Historical patterns from known fake vs. real news</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-brain"></i> Our Machine Learning Model</h3>
+                    <p>
+                        We use a Logistic Regression model trained on thousands of labeled news articles from reliable 
+                        datasets. The model analyzes text features through:
+                    </p>
+                    <ul>
+                        <li>Text preprocessing (tokenization, stop word removal, lemmatization)</li>
+                        <li>TF-IDF vectorization to identify significant word patterns</li>
+                        <li>Probability calibration for confidence scoring</li>
+                        <li>Regular retraining to adapt to evolving news patterns</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-chart-line"></i> Performance and Accuracy</h3>
+                    <p>
+                        Our model achieves approximately 90-95% accuracy on test datasets. However, we emphasize that no 
+                        automated system is perfect, and results should be interpreted as probabilistic rather than 
+                        definitive. False positives and false negatives may still occur.
+                    </p>
+                    <p>
+                        For best results, use this tool as part of a broader fact-checking approach that includes:
+                    </p>
+                    <ul>
+                        <li>Consulting multiple news sources</li>
+                        <li>Checking the author's credibility</li>
+                        <li>Looking for original sources in articles</li>
+                        <li>Being skeptical of extraordinary claims</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-user-shield"></i> Privacy and Data Usage</h3>
+                    <p>
+                        When you use our detector:
+                    </p>
+                    <ul>
+                        <li>We do not store the text you submit for analysis</li>
+                        <li>Analysis is performed locally on our server and results are immediately returned</li>
+                        <li>No personal information is collected beyond basic usage analytics</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-code"></i> Technology Stack</h3>
+                    <p>
+                        This project is built using:
+                    </p>
+                    <ul>
+                        <li>Python and Flask for the backend</li>
+                        <li>Scikit-learn for machine learning</li>
+                        <li>NLTK for natural language processing</li>
+                        <li>HTML/CSS/JavaScript for the frontend</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-hands-helping"></i> Contributing</h3>
+                    <p>
+                        This is an open-source project, and contributions are welcome! If you'd like to help improve 
+                        the detector, please visit our <a href="https://github.com/yourusername/fake-news-detector" target="_blank">GitHub repository</a>.
+                    </p>
+                    
+                    <div class="disclaimer">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Disclaimer</h3>
+                        <p>
+                            This tool is provided for educational and research purposes only. It should not be used as 
+                            the sole determiner of whether information is true or false. Always verify information 
+                            through multiple reliable sources.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Fake News Detector | Built with <i class="fas fa-heart"></i> using Flask and ML</p>
+        </div>
+    </footer>
+</body>
+</html> 

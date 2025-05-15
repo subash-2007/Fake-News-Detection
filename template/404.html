@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Fake News Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-newspaper"></i> Fake News Detector</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="https://github.com/yourusername/fake-news-detector" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="error-container">
+            <div class="container">
+                <i class="fas fa-exclamation-circle" style="font-size: 80px; color: var(--warning-color); margin-bottom: 20px;"></i>
+                <h2>404 - Page Not Found</h2>
+                <p>Sorry, the page you're looking for doesn't exist or has been moved.</p>
+                <p>This might be a fake URL, but our detector only works on news content!</p>
+                <a href="/" class="primary-btn"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Fake News Detector | Built with <i class="fas fa-heart"></i> using Flask and ML</p>
+        </div>
+    </footer>
+</body>
+</html> 
